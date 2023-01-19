@@ -11,10 +11,10 @@
          name: git
          state: latest
      - name: shell nginx
-       shell: amazon-linux-extras enable nginx
+       shell: amazon-linux-extras enable nginx1
      - name: Install nginx
        yum:  
-         name: nginx
+         name: nginx1
          state: latest 
   #  - name: Upgrade all packages, excluding kernel & foo related packages
   #    yum:
