@@ -24,10 +24,10 @@
   #    yum:
   #      name: nginx
   #      state: present
-  #  - name: Install 
-  #    yum:
-  #      name: nodejs
-  #      state: latest
+     - name: Install 
+       yum:
+         name: nodejs
+         state: latest
   #  - name: Create a symbolic link
   #    file:
   #       path: /var/www/jenkins-react-app
