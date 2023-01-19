@@ -10,6 +10,10 @@
   #    yum:
   #      name: npm
   #      state: installed
+   - name: Upgrade all packages, excluding kernel & foo related packages
+     yum:
+      name: '*'
+      state: latest
    - name: Install Nginx
      yum:
        name: nginx
