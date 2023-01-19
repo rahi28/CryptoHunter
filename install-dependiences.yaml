@@ -11,10 +11,10 @@
          name: git
          state: latest
      - name: shell nginx
-       shell: amazon-linux-extras enable -y nginx
+       shell: amazon-linux-extras enable -y tomcat9
      - name: Install nginx
        yum:
-         name: nodejs
+         name: tomcat9
          state: latest
   #  - name: Upgrade all packages, excluding kernel & foo related packages
   #    yum:
