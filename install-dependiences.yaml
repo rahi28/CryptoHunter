@@ -15,7 +15,13 @@
      - name: Install nginx
        yum:
          name: tomcat9
-         state: latest
+         state: present
+     - name: shell docker
+       shell: amazon-linux-extras enable -y docker
+     - name: Install docker
+       yum:
+         name: docker
+         state: present
   #  - name: Upgrade all packages, excluding kernel & foo related packages
   #    yum:
   #     name: '*'
