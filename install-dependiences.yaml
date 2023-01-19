@@ -4,25 +4,25 @@
   become: yes
   remote_user: root
   tasks:
-   - name: Update required packages
-     shell: yum update -y
-  #  - name: Install NPM
+  #  - name: Update required packages
+  #    shell: yum update -y
+     - name: Install git
+       yum:
+         name: git
+         state: latest
+  #  - name: Upgrade all packages, excluding kernel & foo related packages
   #    yum:
-  #      name: npm
-  #      state: installed
-   - name: Upgrade all packages, excluding kernel & foo related packages
-     yum:
-      name: '*'
-      state: latest
-   - name: Install Nginx
-     yum:
-       name: nginx
-       state: present
-   - name: Install 
-     yum:
-       name: nodejs
-       state: latest
-   - name: Create a symbolic link
-     file:
-        path: /var/www/jenkins-react-app
+  #     name: '*'
+  #     state: latest
+  #  - name: Install Nginx
+  #    yum:
+  #      name: nginx
+  #      state: present
+  #  - name: Install 
+  #    yum:
+  #      name: nodejs
+  #      state: latest
+  #  - name: Create a symbolic link
+  #    file:
+  #       path: /var/www/jenkins-react-app
   
