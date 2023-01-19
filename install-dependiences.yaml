@@ -10,8 +10,8 @@
        yum:
          name: git
          state: latest
-     - name: shell tomcat
-       shell: amazon-linux-extras enable tomcat9
+     - name: shell nginx
+       shell: amazon-linux-extras enable nginx
      - name: Install nginx
        yum:
          name: nginx
@@ -20,13 +20,13 @@
   #    yum:
   #     name: '*'
   #     state: latest
-  #  - name: Install Nginx
-  #    yum:
-  #      name: nginx
-  #      state: present
+     - name: Install epel
+       yum:
+         name: epel-release
+         state: present
      - name: Install 
        yum:
-         name: tomcat9
+         name: nodejs
          state: latest
   #  - name: Create a symbolic link
   #    file:
