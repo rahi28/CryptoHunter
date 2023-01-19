@@ -1,9 +1,24 @@
 ---
 - name: Hello Rahi
   hosts: all
+  become: yes
+  remote_user: root
   tasks:
-   - name: Printing Rahis name
-     debug:
-       msg: "Hello There"
+   - name: Update required packages
+     shell: yum update -y
+   - name: Install NPM
+     yum:
+       name: npm
+       state: present
+   - name: Install Nginx
+     yum:
+       name: nginx
+       state: present
    - name:
-     shell: mkdir rahi
+      yum:
+       name: nodejs
+       state: present
+   - name: Create a symbolic link
+     file:
+        path: /var/www/jenkins-react-app
+  
