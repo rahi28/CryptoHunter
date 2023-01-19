@@ -6,18 +6,18 @@
   tasks:
    - name: Update required packages
      shell: yum update -y
-  #  - name: Install NPM
-  #    yum:
-  #      name: npm
-  #      state: present
+   - name: Install NPM
+     yum:
+       name: npm
+       state: latest
    - name: Install Nginx
      yum:
-       name: nginx
-       state: present
+       name: git
+       state: latest
    - name: Install 
      yum:
        name: nodejs
-       state: present
+       state: latest
    - name: Create a symbolic link
      file:
         path: /var/www/jenkins-react-app
