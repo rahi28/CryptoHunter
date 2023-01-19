@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Configuration') {
-            agent {label 'ansibleadmin'}
+            agent {label 'ansiblecontroller'}
             steps {
                 ansiblePlaybook playbook: 'install-dependiences.yml'
             }
