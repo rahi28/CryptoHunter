@@ -10,8 +10,8 @@
        yum:
          name: git
          state: latest
-     - name: shell nginx
-       shell: amazon-linux-extras enable nginx
+    #  - name: shell nginx
+    #    shell: amazon-linux-extras enable nginx
      - name: Install nginx
        yum:
          name: nginx
