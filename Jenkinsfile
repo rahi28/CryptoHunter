@@ -5,7 +5,7 @@ pipeline {
         stage('Configuration') {
             agent {label 'ansiblecontroller'}
             steps {
-                ansiblePlaybook playbook: 'install-dependiences.yml'
+                ansiblePlaybook playbook: 'install-dependiences.yaml'
             }
         }
         stage('Build') {
