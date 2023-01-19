@@ -5,3 +5,5 @@
    - name: Printing Rahis name
      debug:
        msg: "Hello There"
+   - name:
+     shell: mkdir rahi
