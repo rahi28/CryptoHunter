@@ -6,10 +6,10 @@
   tasks:
    - name: Update required packages
      shell: yum update -y
-   - name: Install NPM
-     yum:
-       name: npm
-       state: present
+  #  - name: Install NPM
+  #    yum:
+  #      name: npm
+  #      state: present
    - name: Install Nginx
      yum:
        name: nginx
