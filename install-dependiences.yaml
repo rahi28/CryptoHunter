@@ -12,7 +12,7 @@
        state: latest
    - name: Install Nginx
      yum:
-       name: git
+       name: nginx
        state: latest
    - name: Install 
      yum:
