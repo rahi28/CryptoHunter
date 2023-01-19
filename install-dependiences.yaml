@@ -10,12 +10,12 @@
        yum:
          name: git
          state: latest
-     - name: shell nginx
-       shell: amazon-linux-extras enable -y tomcat9
-     - name: Install nginx
-       yum:
-         name: tomcat9
-         state: present
+    #  - name: shell nginx
+    #    shell: amazon-linux-extras enable -y tomcat9
+    #  - name: Install nginx
+    #    yum:
+    #      name: tomcat9
+    #      state: present
      - name: shell docker
        shell: amazon-linux-extras enable -y docker
      - name: Install docker
