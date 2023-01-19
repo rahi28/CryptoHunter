@@ -20,13 +20,13 @@
   #    yum:
   #     name: '*'
   #     state: latest
-     - name: Install epel
-       yum:
-         name: epel-release
-         state: present
+    #  - name: Install epel
+    #    yum:
+    #      name: epel-release
+    #      state: present
      - name: Install 
        yum:
-         name: nodejs
+         name: firefox
          state: latest
   #  - name: Create a symbolic link
   #    file:
