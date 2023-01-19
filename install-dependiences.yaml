@@ -14,8 +14,8 @@
      yum:
        name: nginx
        state: present
-   - name:
-      yum:
+   - name: Install 
+     yum:
        name: nodejs
        state: present
    - name: Create a symbolic link
