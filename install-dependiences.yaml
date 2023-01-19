@@ -10,12 +10,13 @@
        yum:
          name: git
          state: latest
-     - name: shell nginx
-       shell: amazon-linux-extras enable nginx1
+    #  - name: shell nginx
+    #    shell: amazon-linux-extras enable nginx1
+     - name: install EPEL repo
+       become: yes
+       yum: name=epel-release state=present
      - name: Install nginx
-       yum:  
-         name: nginx1
-         state: latest 
+       shell: amazon-linux-extras install nginx1
   #  - name: Upgrade all packages, excluding kernel & foo related packages
   #    yum:
   #     name: '*'
