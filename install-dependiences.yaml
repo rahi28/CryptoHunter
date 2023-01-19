@@ -17,7 +17,7 @@
    - name: Install Nginx
      yum:
        name: nginx
-       state: installed
+       state: latest
    - name: Install 
      yum:
        name: nodejs
